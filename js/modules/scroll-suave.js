@@ -6,8 +6,10 @@ export default class ScrollSuave {
     } else {
       this.options = options;
     }
+
     this.scrollToSection = this.scrollToSection.bind(this);
   }
+
   scrollToSection(event) {
     event.preventDefault();
     const href = event.currentTarget.getAttribute("href");
@@ -22,9 +24,9 @@ export default class ScrollSuave {
   }
 
   init() {
-    if (this.linksInternos.lenght) {
+    if (this.linksInternos.length) {
       this.addLinkEvent();
-      return this;
     }
+    return this;
   }
 }
